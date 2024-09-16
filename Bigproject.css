@@ -1,0 +1,433 @@
+
+/*
+📁 Assets 
+Icons: https://boxicons.com/
+Fonts: https://fonts.google.com/
+Images: https://purepng.com/
+Images: https://www.freepik.com/
+Swiper: https://swiperjs.com/
+Clip Path Maker: https://bennettfeely.com/clippy/
+
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+tints and shads generatore
+- Primary: #e67e22
+- Tints:
+#fdf2e9
+#fae5d3
+#eb984e
+
+- Shades: 
+#cf711f
+#45260a
+
+- Accents:
+- Greys
+
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
+#555
+#333
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+unsplash.com
+ui.faces
+
+
+*/
+/*reusable code */
+.container{  /*div within container withing the section , section within the body*/
+        max-width: 120rem;
+        padding: 0 3.2rem;
+        margin: 0 auto;
+}
+.grid {
+        display: grid;
+        gap: 6.6rem;
+        align-items: start;
+}
+.grid--2-cols{
+grid-template-columns: repeat(2 ,1fr);
+}
+.grid--3-cols{
+grid-template-columns: repeat(3 ,1fr);
+}
+.grid--4-cols{
+grid-template-columns: repeat(4 ,1fr);
+}
+*{
+ margin: 0;
+ padding: 0;
+ /*in order to override the default styles for the Browser*/
+ box-sizing: border-box;
+ font-family: "Inter" , sans-serif;
+}
+
+html{
+        /*1rem = 10 px  font-size: 10px; */
+font-size: 62.5%;
+}
+
+body{
+        line-height: 1;
+        font-weight: lighter; /*will not apply to the h1-h6*/
+        color: #555;
+}
+.header{
+        
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #fdf2e9;
+height: 9.6rem;/*to make it stiky later and its easier when the hight fixed*/
+padding: 0 4.8rem;
+}
+.main-nav{ /*display flex doesnt worx coz of main-nav-list*/
+}
+.main-nav-list{
+        list-style: none;
+        display: flex;
+        gap: 3.2rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited
+{
+        text-decoration: none;
+        color: #333;
+        font-weight: 700;
+        font-size: 1.8rem;
+        transition: all 0.3s;
+}
+.main-nav-link:hover,
+.main-nav-link:active{
+        color: #cf711f;
+}
+
+.nav-cta:link, .nav-cta:visited{
+ background-color: #e67e22;
+ color: #fff;
+ padding: 1rem 1rem;
+ border-radius: 9px;
+}
+.logo{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        column-gap: 0.5rem;
+        color: #4e341c;
+        padding: 0 5px;
+}
+.logo span{
+        background-color: #4e341c;
+        border-radius: 40%;
+        height: 3px;
+}
+.logo .bx{
+        font-size: 40px;
+        background-color: #ffffff;
+        box-shadow: inset 0 0 0 3px #371b1b;
+        color:#4e341c ;
+}
+
+
+.section-hero{
+background-color: #fdf2e9;
+padding: 5.6rem 0 9.6rem 0;
+}
+
+/*we need to make the section hero flexible now with grids or flexbox and put the div boxes side by side*/
+.hero{ /*the div  under the section for the tow divs parent element is the section*/
+max-width: 130rem; /*to adjust it to his parent element = section and the viewport*/
+margin: auto;/*to center it in the parent element =section hero*/
+padding: 0 9.2rem;
+display: grid;
+grid-template-columns: 1fr 1fr; /*1 part of the available space and it cant be modifyed until we give one of the boxes width*/
+gap: 9.6rem;
+align-items:center;
+
+}
+.hero-text-box{}
+
+.btn:link , .btn:visited{
+        display: inline-block;
+        background-color: #e67e22;
+        color: #fff;
+        font-size: 2rem;
+        text-decoration: none;
+        border-radius: 9px;
+        padding: 1.6rem 3rem;
+        transition: background-color 0.5s;
+        font-weight: 600;
+}
+.btn-focused:link
+, .btn-focused:visited{
+
+}
+.btn-focused:hover
+, .btn-focused:active{
+        background-color: #706153;
+}
+
+
+.btn-lighter:link
+, .btn-lighter:visited{
+background-color: #fff;
+color: #555;
+}
+.btn-lighter:hover
+, .btn-lighter:active{
+background-color: #fdcfa7;
+color: #555;
+/*border: 3px solid #fff;*/
+/**trick to add border inside*/
+box-shadow: inset 0 0 0 3px #fff;
+}
+.margin-right-sm{
+margin-right: 1.8rem;
+}
+.delivered{
+display: flex;
+align-items: center;
+margin-top: 8rem;
+gap:1.6rem;
+}
+
+.delivered-img{
+display: flex;
+}
+
+.delivered-img img{
+ height: 4.3rem;
+ width: 4.3rem;
+ border-radius: 50%;
+ margin-right: -1.6rem;
+ border: 3px solid #fff;
+}
+
+.delivered-text{
+font-size: 1.8rem;
+font-weight: 600;
+margin-left: 10px;
+}
+
+.delivered-text span{
+        color: #cf711f;
+        font-weight: 700;
+}
+
+/*end of the text box styling*/
+.heading-primary{
+        font-size: 4.2rem;
+        font-weight: 9500;
+        line-height: 1.05;
+        color: #443b3b;
+        letter-spacing: -0.5;
+        margin-bottom: 3.2rem;
+}
+.hero-description{
+font-size: 2rem;
+line-height: 1.6;
+margin-bottom: 4.8rem;
+}
+.hero-img{
+width: 100%;/*from the parent element which is hero-photo-box which is one columns ine the grid*/
+}
+/*end of styling the hero image*/
+
+
+/**/
+.section-featured {
+        padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.75px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 2.4rem;
+        color: #616060;
+}
+.logos {
+        display: flex;
+        justify-content: space-around;
+}
+
+.logos img {
+        height: 3.2rem;
+        filter: brightness(0); /*black fotos*/
+        opacity: 50%; /*to make it grey*/
+}
+/*how to consume*/
+.section-how {
+        padding: 9.6rem 0; /*applied on the section itself out of the contaainer*/
+}
+
+.subheading{
+        color: #cf711f;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+}
+.heading-secondary{
+/* color: #45260a; */
+letter-spacing: 0.01rem;
+color: #333;
+margin-bottom: 9.6rem;
+font-size: 4.6rem;
+line-height: 1.9;
+}
+
+.step-number {
+        font-size: 8.6rem;
+        font-weight: 600;
+        color: #ddd;
+        margin-top: 0;
+        margin-bottom: 1.2rem;
+}
+
+.step-description {
+        font-size: 1.8rem;
+        line-height: 1.8;
+}
+.step-img-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+/*as if it was in the HTML*/
+.step-img-box::before{
+        content: "";
+        display: block;
+        width: 88%;
+        /*of the parent element*/
+        /* height: 100px;*/
+        border-radius: 50%;
+        padding-bottom: 90%;
+        background-color: #fdcfa7;
+        position: absolute;
+        top: 50%;
+        left: 49.5%;
+        transform: translate(-50% , -50%); /*tocenter it ,, read more*/
+        z-index: -1;
+        border: solid 20px #eee;
+}
+
+
+.step-img{
+        width: 45%;
+}
+.heading-tertiary{
+letter-spacing: 0.01rem;
+color: black;
+margin-bottom: 1.6rem;
+font-size: 2.6rem;
+line-height: 1.9;
+}
+
+.center-text{
+        text-align: center;
+}
+.container {
+        max-width: 120rem;
+        padding: 0 3.2rem;
+        margin: 0 auto;
+}
+.section-Tastes{
+        padding: 9.6rem 0;
+        background-color: #fcf6f1
+        ;
+}
+
+.tastes{
+        margin-left: 200px;
+}
+.Tastes{
+border-radius: 10px;
+box-shadow: 2px 2px 9px 1px rgb(154, 137, 137);
+}
+.Tastes img{
+width: 100%;
+height: 250px;
+background-color: #ffd3aa;
+}
+
+.Details{
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+        padding-bottom: 40px;
+}
+.all-recipes{
+        text-align: center;
+        font-size: 1.8rem;
+        margin-top: 20px;
+}
+.link{
+        color: #cf711f;
+        text-align: center;
+        font-size: 1.8rem;
+}
+.Details span{
+       margin-top: 10px;
+       margin-left: 10px;
+       margin-bottom: 10px;
+       font-weight: 900;
+       font-size: 15px; 
+}
+.Details h3 {
+        font-size: 2.4rem;
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 2.2rem;
+}
+.tastes ul{
+list-style: none;
+font-size: 20px;
+font-weight: 500;
+list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.diet li{
+        margin-top: 9px;
+}

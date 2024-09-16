@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="Bigproject.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">  
+</head>
+<body>
+    <header class="header"><!--we need the header out of the fixed in container so we use the same header on all the pages , it isnot a part of any webpage   -->
+        
+        <a href="#" class="logo"> <i class='bx bxs-coffee-togo'></i> C<span>O</span>FFEE </a>
+        
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li><a class="main-nav-link" href="#">How to consume</a></li>
+                <li><a class="main-nav-link" href="#">Tastes</a></li>
+                <li><a class="main-nav-link" href="#">Testimonials</a></li>
+                <li><a class="main-nav-link" href="#">Pricing</a></li>
+                <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <main><!--just to know this is the main part of our page , not affecting -->
+    <section class="section-hero"> 
+        <!--if we used the section container with the grid we will not be able to create fixed sized container that matsches the other sections that why i made the hero div-->
+        <!--within i will make tow boxes(div) one for the main foto and the other for the main text-->
+      <div class="hero">
+        <div class="hero-text-box">
+            <h1 class="heading-primary">A healthy Coffee&Beans delivered to your door, every single day</h1>
+            <p class="hero-description">
+                The smart 365-days-per-year Coffee subscription that will make you
+                drink healthy again. Tailored to your personal tastes and
+                nutritional needs.
+            </p>
+            <!--the <button class="btn-">only for actionsthe button element cant be anchore so lets use a element for going somewhere in the page-->
+            <a href="#" class="btn btn-focused  margin-right-sm">Start drink well</a> <!--helper class for reusable code-->
+            <a href="#" class="btn btn-lighter">Learn more &darr;</a>
+            <div class="delivered">
+                <div class="delivered-img">
+                <img src="uifaces-popular-image (1).jpg">
+                <img src="uifaces-popular-image (2).jpg">
+                <img src="uifaces-popular-image (3).jpg">
+                <img src="uifaces-popular-image (4).jpg">
+                <img src="uifaces-popular-image (5).jpg">
+                <img src="uifaces-popular-image (6).jpg">
+                </div>
+                <p class="delivered-text"> <span>250,000+</span> meals delivered last year!</p>
+            </div>
+        </div>
+        <div class="hero-photo-box">
+            <img src="heroo (2).jpg" class="hero-img">
+        </div>
+      </div>  
+    </section>
+
+    <section class="section-featured">
+        <div class="container">
+          <h2 class="heading-featured-in">As featured in</h2>
+          <div class="logos">
+            <img src="techcrunch.png" alt="Techcrunch logo" />
+            <img src="business-insider.png" alt="Business Insider logo"/>
+            <img src="the-new-york-times.png"alt="The New York Times logo"/>
+            <img src="forbes.png" alt="Forbes logo" />
+            <img src="usa-today.png" alt="USA Today logo" />
+          </div>
+        </div>
+    </section>
+
+    <section class="section-how">
+        <div class="container"> <!--i dont need it to contain but the head -->
+            <span class="subheading">How To Consume</span>
+            <h2 class="heading-secondary">Your daily dose of health in 3 simple steps</h2>
+        </div>
+         <div class="container grid grid--2-cols grid--center-v"> <!--will work as a container for the commen divs-->
+            <!--step1-->
+            <div class="step-text-box"><!--مينفعش استخدم الكلاس دا فالاستايل لان جواه كومبونتستن مختلفة-->
+                <p class="step-number">01</p>
+                <h3 class="heading-tertiary">
+                    Tell us what you like (and what not)
+                </h3>
+                <p class="step-description">
+                    Never again waste time thinking about what to drink! Coffee AI
+                    will create a 100% personalized weekly Tastes plan just for you. It
+                    makes sure you get all the nutrients and vitamins you need, no
+                    matter what diet you follow!
+                </p>
+            </div>
+
+            <div class="step-img-box">
+                <img src="brain-fod.png" alt="">
+            </div>
+            <!--step2-->
+            <div class="step-img-box">
+                <img src="step2.png" alt="">
+            </div>
+
+            <div class="step-text-box">
+                <p class="step-number">02</p>
+                <h3 class="heading-tertiary">Approve your weekly coffee plan</h3>
+                <p class="step-description">
+                  Once per week, approve the coffee plan generated for you by Omnifood
+                  AI. You can change ingredients, swap entire coffee, or even add
+                  your own recipes.
+                </p>
+            </div>
+            <!--step3-->
+            <div class="step-text-box">
+                <p class="step-number">03</p>
+                <h3 class="heading-tertiary">Receive coffee at convenient time</h3>
+                <p class="step-description">
+                  Best chefs in town will cook your selected meal every day, and we
+                  will deliver it to your door whenever works best for you. You can
+                  change delivery schedule and address daily!
+                </p>
+            </div>
+            
+            <div class="step-img-box">
+                <img src="step3-.png" alt="">
+            </div>
+         </div>
+
+    </section>
+
+    <section class="section-Tastes">
+        <div class="container center-text">
+            <span class="subheading">Tastes</span>
+            <h2 class="heading-secondary">Coffee AI chooses from 5,000+ Taste</h2>
+        </div>
+
+        <div class="container tastes grid grid--3-cols margin-bottom-md">
+            <div class="Tastes">
+                <img src="tastes1.png" alt="">
+                <div class="Details">
+                    <span>caputiiti</span>
+                    <h3>Japanese Gyozas</h3>
+                <ul>
+                    <li> <i class='bx bx-bookmark'></i><span>650 calories</span></li>
+                    <li> <i class='bx bx-bookmark'></i><span>650 calories</span></li>
+                    <li> <i class='bx bx-bookmark'></i><span>650 calories</span></li>
+                </ul>
+                </div>
+            </div>
+            <div class="Tastes">
+                <img src="tastes2.png" alt="">
+
+                <div class="Details">
+                    <span>caputiiti</span>
+                    <h3>Japanese Gyozas</h3>
+                    <ul>
+                        <li> <i class='bx bx-bookmark'></i><span>650 calories</span></li>
+                        <li> <i class='bx bx-bookmark'></i><span>650 calories</span></li>
+                        <li> <i class='bx bx-bookmark'></i><span>650 calories</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="stack">
+                <div class="Details">
+                    <h3>Works with any diet:</h3>
+                    <ul class="diet">
+                    <li >Vegetarian</li>
+                    <li>Vegan</li>
+                    <li>Pescatarian</li>
+                    <li>Glutan-free</li>
+                    <li>lactose-free</li>
+                    <li>Keto</li>
+                    <li>Paleo</li>
+                    <li>Low FODMAP</li>
+                    <li>Kis-friendly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container all-recipes center-text">
+            <a href="#" class="link">See all recipes &rarr;</a>
+        </div>
+    </section>
+  </main>
+    <script src="ominifood.js"></script>
+</body>
+</html>
